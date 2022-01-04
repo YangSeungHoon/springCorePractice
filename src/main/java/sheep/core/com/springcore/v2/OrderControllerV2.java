@@ -1,4 +1,4 @@
-package sheep.core.com.springcore.v3;
+package sheep.core.com.springcore.v2;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
