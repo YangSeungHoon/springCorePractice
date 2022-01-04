@@ -1,0 +1,13 @@
+package sheep.core.com.springcore.trace.logtrace;
+
+import sheep.core.com.springcore.trace.TraceStatus;
+
+public interface LogTrace {
+
+    TraceStatus begin(String message);
+
+    void end(TraceStatus status);
+
+    void exception(TraceStatus status, Exception e);
+
+}
