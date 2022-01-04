@@ -48,4 +48,26 @@ public class TemplateMethodTest {
         AbstractTemplate template2 = new SubClassLogic2();
         template2.execute();
     }
+
+    // 템플릿 메서드 패턴 단점 보완 (지속적인 클래스 생성을 보완)
+    @Test
+    void templateMethodV2(){
+        AbstractTemplate template1 = new AbstractTemplate(){
+
+            @Override
+            protected void call(){
+                log.info("비즈니스 로직1 실행");
+            }
+        };
+        template1.execute();
+
+        AbstractTemplate template2 = new AbstractTemplate(){
+
+            @Override
+            protected void call(){
+                log.info("비즈니스 로직2 실행");
+            }
+        };
+        template2.execute();
+    }
 }
